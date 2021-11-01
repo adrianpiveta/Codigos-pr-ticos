@@ -2,6 +2,11 @@ import java.util.*;
 import java.text.*;
 
 public class Conta{
+<<<<<<< HEAD
+=======
+  private int id;
+  private static int totalContas;
+>>>>>>> main
   private double saldo;
   private String titular;
   private String cpf;
@@ -39,6 +44,25 @@ public class Conta{
     return formatoData.format(dataAbertura);
   }
 
+<<<<<<< HEAD
+=======
+  public boolean setTitular(String titular){
+    if(titular!=null){
+      this.titular=titular;
+      return true;
+    }
+    return false;
+  }
+
+  public int getId(){
+    return this.id;
+  }
+
+  public int getTotalContas(){
+    return Conta.totalContas;
+  }
+
+>>>>>>> main
   String recuperaDadosParaImpressao(){
     return ( "Saldo: " + String.valueOf(this.saldo) + "\n" +
               "CPF: " + this.cpf + "\n" +
@@ -47,7 +71,15 @@ public class Conta{
               "Tipo: " + this.tipo );
   }
 
+<<<<<<< HEAD
   public Conta(double saldo, String titular, String tipo, String cpf){
+=======
+
+
+  public Conta(double saldo, String titular, String tipo, String cpf){
+    Conta.totalContas++;
+    this.id=Conta.totalContas;
+>>>>>>> main
     this.saldo=saldo;
     this.titular=titular;
     this.cpf=cpf;
@@ -55,4 +87,16 @@ public class Conta{
     this.tipo=tipo;
   }
 
+<<<<<<< HEAD
+=======
+  public Conta(double saldo, String tipo, String cpf){
+    this.id=Conta.totalContas;
+    Conta.totalContas++;
+    this.saldo=saldo;
+    this.cpf=cpf;
+    this.dataAbertura= new Date();
+    this.tipo=tipo;
+  }
+
+>>>>>>> main
 }

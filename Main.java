@@ -3,6 +3,12 @@
 public class Main{
   public static void main(String[] args) {
     Conta c1 = new Conta(100.0 , "jose augusto", "Corrente","11457425498");
+<<<<<<< HEAD
+    Conta c2 = c1;
+
+    System.out.println(c1.recuperaDadosParaImpressao());
+
+=======
     Conta c2 = new Conta(1000.0 , "jose augusto", "Corrente","11457425498");
 
     System.out.println(c1.recuperaDadosParaImpressao());
@@ -12,6 +18,7 @@ public class Main{
 
     System.out.println("Total de contas: "+c1.getTotalContas());
 
+>>>>>>> main
     if(c1==c2){
       System.out.println("iguais");
     }
